@@ -7,7 +7,9 @@ import java.sql.Connection;
  * 连接的工具类，它用于从数据源中获取一个连接，并且实现和线程的绑定
  */
 public class ConnectionUtils {
-
+    /**
+    * ThreadLocal<> 是一个容器（应用类似于map），作用就是将线程与存入该容器中的值对应起来
+    */
     private ThreadLocal<Connection> tl = new ThreadLocal<Connection>();
 
     private DataSource dataSource;
